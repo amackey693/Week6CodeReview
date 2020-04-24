@@ -14,7 +14,7 @@ $(document).ready(function() {
       const usdExchange = await currency.usdExchange(); 
       let userInput = parseInt($('#insert-rate').val());
       let rate = $('#rate').val();
-      let result = rateExchange(userInput, rate);
+      let result =  rateExchange(userInput, rate);
 
       $('#output').html(`<p> $${userInput} USD Dollar is Equal to ${result} ${rate}<p>`);
 
@@ -22,26 +22,28 @@ $(document).ready(function() {
       function rateExchange(userInput, newRate) {
         let num = userInput; 
         let rate = newRate;
-        let cadRate = usdExchange.CAD * num;
-        let eurRate = usdExchange.EUR * num; 
-        let jpyRate = usdExchange.JPY * num; 
-        let mxnRate = usdExchange.MXN * num; 
-        let thbRate = usdExchange.THB * num;
+        let symbol = ["$", "€", "¥", "฿"]
+  
 
         if (num === 0 || rate === " ") {
           return newRate = "Please fill out form";
-        } else if (num > 0 && rate === "CAD") {
-          newRate = cadRate.toFixed(2);
-        } else if (num > 0 && rate === "EUR") {
-          newRate = eurRate.toFixed(2); 
-        } else if (num > 0 && rate === "JPY") {
-          newRate = jpyRate.toFixed(2); 
-        } else if (num > 0 && rate === "MXN") {
-          newRate = mxnRate.toFixed(2); 
-        } else if (num > 0 && rate === "THB") {
-          newRate = thbRate.toFixed(2); 
+        } 
+        else if (num > 0 && rate === "CAD") {
+          newRate = symbol[0] + (usdExchange.CAD * num).toFixed(2);
         }
-        return newRate; 
+        else if (num > 0 && rate === "EUR") {
+          newRate = symbol[1] + (usdExchange.EUR * num).toFixed(2); 
+        } 
+        else if (num > 0 && rate === "JPY") {
+          newRate = symbol[2] + (usdExchange.JPY * num).toFixed(2); 
+        } 
+        else if (num > 0 && rate === "MXN") {
+          newRate = symbol[0] + (usdExchange.MXN * num).toFixed(2); 
+        } 
+        else if (num > 0 && rate === "THB") {
+          newRate = symbol[3] + (usdExchange.THB * num).toFixed(2); 
+        }
+        return newRate.toString();
       }
     })(); 
   });

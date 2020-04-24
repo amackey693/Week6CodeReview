@@ -14,6 +14,7 @@ export class Currency {
       }
       return jsonifiedResponse;
     } catch (error) {
+      console.log(error);
       return false;
     }
   }
