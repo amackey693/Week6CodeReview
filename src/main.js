@@ -15,10 +15,6 @@ $(document).ready(function() {
       let userInput = parseInt($('#insert-rate').val());
       let rate = $('#rate').val();
       let result =  rateExchange(userInput, rate);
-    
-      console.log('length', result.length)
-      console.log(typeof result)
-
 
       $('#output').html(`<p> $${userInput} USD Dollar is Equal to ${result} ${rate}<p>`);
 
