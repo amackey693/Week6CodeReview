@@ -15,6 +15,10 @@ $(document).ready(function() {
       let userInput = parseInt($('#insert-rate').val());
       let rate = $('#rate').val();
       let result =  rateExchange(userInput, rate);
+    
+      console.log('length', result.length)
+      console.log(typeof result)
+
 
       $('#output').html(`<p> $${userInput} USD Dollar is Equal to ${result} ${rate}<p>`);
 
@@ -23,11 +27,10 @@ $(document).ready(function() {
         let num = userInput; 
         let rate = newRate;
         let symbol = ["$", "€", "¥", "฿"];
-  
-
+        
         if (num === 0 || rate === " ") {
           return newRate = "Please fill out form";
-        } 
+        }
         else if (num > 0 && rate === "CAD") {
           newRate = symbol[0] + (usdExchange.CAD * num).toFixed(2);
         }
@@ -41,9 +44,9 @@ $(document).ready(function() {
           newRate = symbol[0] + (usdExchange.MXN * num).toFixed(2); 
         } 
         else if (num > 0 && rate === "THB") {
-          newRate = symbol[3] + (usdExchange.THB * num).toFixed(2); 
+          newRate = symbol[3] + ((usdExchange.THB * num).toFixed(2));
         }
-        return newRate.toString();
+        return newRate;
       }
     })(); 
   });
