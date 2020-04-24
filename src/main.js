@@ -2,7 +2,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
-import { Currency } from './currency-exchange'
+import { Currency } from './currency-exchange';
 
  
 
@@ -16,7 +16,7 @@ $(document).ready(function() {
       let rate = $('#rate').val();
       let result = rateExchange(userInput, rate);
 
-      $('#output').html(`<p> $${userInput} USD Dollar is Equal to ${result} ${rate}<p>`) 
+      $('#output').html(`<p> $${userInput} USD Dollar is Equal to ${result} ${rate}<p>`);
 
 
       function rateExchange(userInput, newRate) {
@@ -43,6 +43,6 @@ $(document).ready(function() {
         }
         return newRate; 
       }
-    })() 
+    })(); 
   });
 });
