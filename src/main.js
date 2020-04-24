@@ -1,9 +1,8 @@
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { Currency } from './currency-exchange'
-// import $ from "jquery";
+import $ from "jquery";
 
-// $(document).ready(function(){
+$(document).ready(function(){
 
-// });
+});
