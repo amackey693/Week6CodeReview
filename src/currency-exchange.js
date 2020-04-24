@@ -8,7 +8,6 @@ export class Currency {
         jsonifiedResponse = await response.json();
         let allRates = jsonifiedResponse.conversion_rates;
         jsonifiedResponse = allRates;
-        console.log(allRates);
       } 
       else {
         jsonifiedResponse = false; 

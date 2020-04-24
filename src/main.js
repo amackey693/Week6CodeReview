@@ -4,7 +4,7 @@ import './styles.css';
 import $ from "jquery";
 import { Currency } from './currency-exchange'
 
-
+ 
 
 $(document).ready(function() {
   $("#form").submit(function(event){
@@ -31,15 +31,15 @@ $(document).ready(function() {
         if (num === 0 || rate === " ") {
           return newRate = "Please fill out form";
         } else if (num > 0 && rate === "CAD") {
-          newRate = cadRate; 
+          newRate = cadRate.toFixed(2);
         } else if (num > 0 && rate === "EUR") {
-          newRate = eurRate; 
+          newRate = eurRate.toFixed(2); 
         } else if (num > 0 && rate === "JPY") {
-          newRate = jpyRate; 
+          newRate = jpyRate.toFixed(2); 
         } else if (num > 0 && rate === "MXN") {
-          newRate = mxnRate; 
+          newRate = mxnRate.toFixed(2); 
         } else if (num > 0 && rate === "THB") {
-          newRate = thbRate; 
+          newRate = thbRate.toFixed(2); 
         }
         return newRate; 
       }
