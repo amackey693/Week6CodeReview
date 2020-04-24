@@ -7,33 +7,8 @@ export class Currency {
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
         let allRates = jsonifiedResponse.conversion_rates;
-        console.log(newRate);
-        jsonifiedResponse = allRates;  
-
-        rateExchange(userInput, newRate) {
-          let num = userInput; 
-          let rate = newRate;
-          let cadRate = allRates.CAD * num;
-          let eurRate = allRates.EUR * num; 
-          let jpyRate = allRates.JPY * num; 
-          let mxnRate = allRates.MXN * num; 
-          let thbRate = allRates.THB * num;
-      
-          if (num === 0 || rate === " ") {
-            return newRate = "Please fill out form";
-          } else if (num > 0 && rate === "CAD") {
-            newRate = cadRate; 
-          } else if (num > 0 && rate === "EUR") {
-            newRate = eurRate; 
-          } else if (num > 0 && rate === "JPY") {
-            newRate = jpyRate; 
-          } else if (num > 0 && rate === "MXN") {
-            newRate = mxnRate; 
-          } else if (num > 0 && rate === "THB") {
-            newRate = thbRate; 
-          }
-          return newRate; 
-        }
+        jsonifiedResponse = allRates;
+        console.log(allRates);
       } 
       else {
         jsonifiedResponse = false; 
