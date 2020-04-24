@@ -7,11 +7,8 @@ export class Currency {
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
         let newRate = jsonifiedResponse.conversion_rates;
-        
-       
         console.log(newRate);
-       
-
+        jsonifiedResponse = newRate;  
       } 
       else {
         jsonifiedResponse = false; 
@@ -22,7 +19,21 @@ export class Currency {
       return false
     }
   }
+ 
 }
 
-
+export class UserInfo extends Currency {
+  constructor(userInput) {
+    this.userInput = userInput;
+  }
+  rateExchange() {
+    let num = this.userInput; 
+    let cadRate = usdExchange.CAD * num;
+    let eurRate = usdExchange.EUR * num; 
+    let jpyRate = usdExchange.EUR * num; 
+    let mxnRate = usdExchange.MXN * num; 
+    let thbRate = usdExchange.THB * num;
+    this.newRates = [cadRate, eurRate, jpyRate, mxnRate, thbRate]
+  }
+}
 

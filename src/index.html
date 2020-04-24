@@ -4,11 +4,22 @@
     <title>Currency Exchange</title>
   </head>
   <body>
-    <div class = "form-group">
-      <input type="number" class = "form-control" id = "insert-rate">
-
-    </div>
+    <form id="form" type = "submit">
+      <label for="amount">Enter Number to Convert: </label>
+      <input type="text" class = "form-control" id = "insert-rate">
+      <br>
+      <label for="rate">Select Exchange </label>
+      <select class="form-control" id="rate">
+        <option value=" "></option>
+        <option value="auto-select">Please Enter A Number</option>
+        <option value="CAD">Canadian Dollar (CAD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="JPY">Japanese Yen (JPY)</option>
+        <option value="MXN">Mexican Peso (MXN)</option>
+        <option value="THB">Thai Baht</option>
+      </select>
       <button class = "get-exchange" type = "submit">See Your Rates</button>
+    </form>
     </form>
   </body>
 </html>
