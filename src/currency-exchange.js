@@ -6,7 +6,12 @@ export class Currency {
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
-        console.log(jsonifiedResponse);
+        let newRate = jsonifiedResponse.conversion_rates;
+        
+       
+        console.log(newRate);
+       
+
       } 
       else {
         jsonifiedResponse = false; 
@@ -18,5 +23,6 @@ export class Currency {
     }
   }
 }
+
 
 

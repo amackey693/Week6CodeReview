@@ -4,11 +4,10 @@ import './styles.css';
 import $ from "jquery";
 import { Currency } from './currency-exchange'
 
-$(document).ready(function(){
+$(document).ready(function() {
   (async () => {
     let currency = new Currency();
     const usdExchange = await currency.usdExchange();
     console.log(usdExchange);
-
-  })();
+  })()
 });
