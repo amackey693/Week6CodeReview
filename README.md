@@ -26,16 +26,10 @@ _This application will allow the user to input a number and retrieve an exchange
 
 |   Behavior Description        |
 |-------------------------------|
-| 1. Does not allow user to insert a blank string or number less than 0. [] |
-| 2. Allow user to input a number and select a rate to exchange to via drop down list []|
-| 3. Returns number to user based off of the exchange rate they chose []|
-| 4.  []|
-| 5.  []|
-| 6.  []|
-| 7.  []|
-| 8.  []|
-| 9.  []|
-| 10. []|
+| 1. Does not allow user to insert a blank string or number less than 0. [X] |
+| 2. Allow user to input a number and select a rate to exchange to via drop down list [X]|
+| 3. Returns number to user based off of the exchange rate they chose [X]|
+
 
 ## Known Bugs
 
@@ -43,11 +37,11 @@ _No known bugs at this time_
 
 ## Support and contact details
 
-_If you have any questions or any issues please feel free to submit an issue here: https://github.com/amackey693/INSERTGITHUBREPOHERE/issues_
+_If you have any questions or any issues please feel free to submit an issue here: https://github.com/amackey693/Week6CodeReview/issues_
 
 ## Technologies Used
 
-_Node, Jest, jQuery, & JavaScript_
+_Node, jQuery, & JavaScript_
 
 
 ### License
