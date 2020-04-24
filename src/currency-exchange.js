@@ -23,17 +23,33 @@ export class Currency {
 }
 
 export class UserInfo extends Currency {
-  constructor(userInput) {
+  constructor(userInput, selectedRate) {
     this.userInput = userInput;
+    this.selectedRate = selectedRate; 
   }
   rateExchange() {
     let num = this.userInput; 
+    let rate = this.selectedRate; 
     let cadRate = usdExchange.CAD * num;
     let eurRate = usdExchange.EUR * num; 
-    let jpyRate = usdExchange.EUR * num; 
+    let jpyRate = usdExchange.JPY * num; 
     let mxnRate = usdExchange.MXN * num; 
     let thbRate = usdExchange.THB * num;
-    this.newRates = [cadRate, eurRate, jpyRate, mxnRate, thbRate]
+
+    if (num === 0 || rate === " ") {
+      return this.newRates = "Please fill out form";
+    } else if (num > 0 && rate === "CAD") {
+      this.newRate = cadRate; 
+    } else if (num > 0 && rate === "EUR") {
+      this.newRate = eurRate; 
+    } else if (num > 0 && rate === "JPY") {
+      this.newRate = jpyRate; 
+    } else if (num > 0 && rate === "MXN") {
+      this.newRate = mxnRate; 
+    } else if (num > 0 && rate === "THB") {
+      this.newRate = thbRate; 
+    }
+    return this.newRate; 
   }
 }
 
