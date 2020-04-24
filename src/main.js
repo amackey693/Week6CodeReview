@@ -4,8 +4,6 @@ import './styles.css';
 import $ from "jquery";
 import { Currency } from './currency-exchange';
 
- 
-
 $(document).ready(function() {
   $("#form").submit(function(event){
     event.preventDefault();
@@ -16,10 +14,6 @@ $(document).ready(function() {
       let rate = $('#rate').val();
       let result =  rateExchange(userInput, rate);
     
-      console.log('length', result.length)
-      console.log(typeof result)
-
-
       $('#output').html(`<p> $${userInput} USD Dollar is Equal to ${result} ${rate}<p>`);
 
 
