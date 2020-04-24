@@ -1,34 +1,34 @@
-# _APPNAME HERE_
+# _Currency Exchange_
 
-#### _A practice application using node, jQuery & JavaScript to display my knowledge of ....INSERT INFO HERE. DATE HERE_
+#### _A practice application using node, jQuery & JavaScript to display my knowledge of API Calls. 4.24.2020_
 
 #### By _**Allison Mackey**_
 
 ## Description
 
-_This application will....._ 
+_This application will allow the user to input a number and retrieve an exchange rate based off of their selection_ 
 
 ## Setup/Installation Requirements
 
-* _View Site on gh-pages here: https://amackey693.github.io/INSERT_GITHUB_REPO_HERE_
-* _Clone Repository from GitHub : https://github.com/amackey693/INSERT_GITHUB_REPO_HERE_
+* _View Site on gh-pages here: https://amackey693.github.io/Week6CodeReview_
+* _Clone Repository from GitHub : https://github.com/amackey693/Week6CodeReview_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
-* _Open your terminal in Virtual Studio Code & type "npm install" this will install all of the packages that are associated with this particular project. 
-* _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git 
-* _Be sure that your .gitignore file includes the correct files to ignore. Now you're ready to initialize your empty git repository. 
+* _Open your terminal in Virtual Studio Code & type "npm install" this will install all of the packages that are associated with this particular project._
+* _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git_
+* _Be sure that your .gitignore file includes the correct files to ignore. Now you're ready to initialize your empty git repository._
 * _Create your own repository and push new changes to GitHub_
 * _You may run a local server using the webpack that is installed by running $ npm run start_
-* _If you would like to view your page on a live server you can push your page to gh-pages or download the live server extension for Virtual Studio Code._
+
 
 
 ## Behavior Driven Development 
 
 
-|   Behavior Description        |  
+|   Behavior Description        |
 |-------------------------------|
-| 1.  []|
-| 2.  []|
-| 3.  []|
+| 1. Does not allow user to insert a blank string or number less than 0. [] |
+| 2. Allow user to input a number and select a rate to exchange to via drop down list []|
+| 3. Returns number to user based off of the exchange rate they chose []|
 | 4.  []|
 | 5.  []|
 | 6.  []|
