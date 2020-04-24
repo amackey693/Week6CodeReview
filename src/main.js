@@ -22,7 +22,7 @@ $(document).ready(function() {
       function rateExchange(userInput, newRate) {
         let num = userInput; 
         let rate = newRate;
-        let symbol = ["$", "€", "¥", "฿"]
+        let symbol = ["$", "€", "¥", "฿"];
   
 
         if (num === 0 || rate === " ") {

@@ -3,6 +3,8 @@
 }
 
 .info {
+  display: flex;
+  flex-flow: column;
   padding: 20px;
   background-color: rgba(128, 128, 128, 0.664);
   border-radius: 8px;
@@ -17,14 +19,18 @@ body {
   justify-content: center;
   text-align: center;
   color: whitesmoke;
+  font-family: 'Quicksand', sans-serif;
 }
 
 button {
   margin-top: 25px;
 }
 
+h1 {
+  font-family: 'Teko', sans-serif;
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  h1 {
-    font-size: 26px;
+  body {
+    zoom: 300%;
   }
 }
